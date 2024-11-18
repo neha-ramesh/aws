@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Streaming App</title>
+  <style>
+    /* General body styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .navbar ul li a:hover {
+      color: #00d9ff;
+    }
+
+    /* Page styles */
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 50px); /* Adjust for navbar height */
+      text-align: center;
+    }
+
+    /* Home section styles */
+    #home h2 {
+      font-size: 48px; /* Larger font size for the heading */
+      margin: 10px 0;
+    }
+
+    #home p {
+      font-size: 24px; /* Larger font size for the paragraph */
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>My Streaming App</h1>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('movies')">Movies</a></li>
+      <li><a onclick="showPage('tv-shows')">TV Shows</a></li>
+      <li><a onclick="showPage('my-list')">My List</a></li>
+    </ul>
+  </div>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <h2>Welcome to My Streaming App</h2>
+    <p>Explore a world of entertainment at your fingertips!</p>
+  </div>
+
+  <!-- Other pages -->
+  <div id="movies" class="page">
+    <h2>Movies</h2>
+    <p>Discover trending and classic movies here!</p>
+    <div class="video-container">
+      <video width="800" height="500" loop autoplay muted controls>
+        <source
+          src="https://d2jje1prixf144.cloudfront.net/2024-11-09%2022-02-48.mkv"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div id="tv-shows" class="page">
+    <h2>TV Shows</h2>
+    <p>Binge your favorite TV shows here!</p>
+    <div class="video-container">
+      <video width="800" height="500" loop autoplay muted controls>
+        <source
+          src="https://rr5---sn-h557sn6d.googlevideo.com/videoplayback?expire=1731967136&ei=QGQ7Z-vrIZOd4t4P8onS2AI&ip=2405%3A201%3Ae059%3A401b%3Ac516%3A64b5%3Af8c1%3A419b&id=o-AKxKWBNUIpewfnxywGObKe-RUws9lkCktrBsI1CbgyIs&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&vprv=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=2887871601&ratebypass=yes&dur=43153.565&lmt=1727055859625082&fexp=24350590,24350675,24350705,24350737,51299154,51312688,51326932&c=ANDROID_VR&txp=4538434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhALULJurrPQv1T2CDdaK844GBXI4NOiRIT3NLReOEi53UAiBFJP5B0InrwkxfZlsAo13cREMhvLgAklzWe-VmbTAsDw%3D%3D&title=Norway%204K%20%E2%80%A2%20Scenic%20Relaxation%20Film%20with%20Peaceful%20Relaxing%20Music%20and%20Nature%20Video%20Ultra%20HD&rm=sn-gwpa-h55r7e,sn-h55ey7s&rrc=79,104&req_id=19adfb04144ea3ee&rms=nxu,au&redirect_counter=2&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1731945549,&mh=Z8&mip=2406:7400:bb:6ac6:28a5:50b:1852:adca&mm=30&mn=sn-h557sn6d&ms=nxu&mt=1731945397&mv=m&mvi=5&pl=49&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=AGluJ3MwRAIgGGTJmJfkjFRwGEtPWmqFqz-_ZbpaGfcqA-ul9c8-Z4gCIBx340577YOvnvYP7jT5UjoSLR7ZietqEMYxZ4hV-FrX"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div id="my-list" class="page">
+    <h2>My List</h2>
+    <p>Access your saved content here.</p>
+    <div class="video-container">
+      <video width="800" height="500" loop autoplay muted controls>
+        <source
+        src="https://rr3---sn-5jucgv5qc5oq-h55y.googlevideo.com/videoplayback?expire=1731970882&ei=4nI7Z7HSMb3b7OsPs4bbSQ&ip=49.148.245.219&id=o-AISvjpwCC-vt-m5BICvulFgr9WZWd55btWc1gsicQFgK&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&vprv=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=24169517&ratebypass=yes&dur=283.190&lmt=1727611383807051&fexp=24350590,24350675,24350705,24350737,51299154,51312688,51326932&c=ANDROID_VR&txp=4538434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Cmime%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgIv6oFVnXfblyToXPV5fMCKI1vxM_5GL-BjHdst5Dw1ECIQDviDitB7PjkWQQv8PSzFTCs6ja1u4AkJTKbe6dB_liRw%3D%3D&title=Thandanaanandha%20-%20Ante%20Sundaraniki%20Promo%20Song%7C%20Nani%20%7C%20Nazriya%20Fahadh%7C%20Shankar%20Mahadevan%20%7CVivek%20Sagar&rm=sn-2aqu-jxcr7l,sn-hoal7e&rrc=79,104&req_id=75e8f4f9ed48a3ee&cmsv=e&rms=rdu,au&redirect_counter=2&cms_redirect=yes&ipbypass=yes&met=1731949288,&mh=de&mip=2406:7400:bb:853b:dd4a:8ebb:2a1d:1257&mm=29&mn=sn-5jucgv5qc5oq-h55y&ms=rdu&mt=1731948808&mv=m&mvi=3&pcm2cms=yes&pl=51&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl,rms&lsig=AGluJ3MwRQIhAOiQ0Pu9vHNCZWFgyb7ajrQ95J6gl6etXBdEE7rXyUWKAiBH7PZaQKtIp4EfOKf6xD8s0YdoyOBzub1BCBA6tP5tjQ%3D%3D"
+        type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    // Function to show the selected page and hide others
+    function showPage(pageId) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach((page) => page.classList.remove('active'));
+
+      // Show the selected page
+      const selectedPage = document.getElementById(pageId);
+      if (selectedPage) {
+        selectedPage.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
